@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --border: rgba(255, 255, 255, 0.1); /* 比如一个淡白色边框 */
+  --layer: #1f1f1f; /* 深灰色浮层背景 */
+  
+  --card-height: 45vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+html {
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+.screen-max-width{
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1600px;
+}
+
+@layer utilities {
+    .flex-center {
+      @apply flex items-center justify-center
+    }
+  
+    .nav-height {
+      @apply h-[calc(100vh-60px)]
+    }
+}
+
+/* 可选：dark style antd modal（放到 css/less/scss） */
+.dark-modal .ant-modal-content {
+    background: #1e1e1e;
+    color: white;
+}
+.dark-modal .ant-btn-primary {
+    background-color: #4a90e2;
+    border: none;
+}
+
+
+.glassmorphism{
+    background: rgba( 0, 0, 0, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.whiteGlassmorphism{
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
